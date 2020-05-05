@@ -1,0 +1,3 @@
+instance-id: alpine-example
+local-hostname: alpine-example
+hostname: alpine-example

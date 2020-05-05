@@ -1,0 +1,16 @@
+#cloud-config
+
+disable_root: false
+users:
+  - name: root
+    lock_passwd: false
+    ssh_authorized_keys:
+      - ssh-rsa AAAAA
+
+write_files:
+  # don't try to configure against any network providers
+  - path: /etc/cloud/cloud.cfg.d/60_nocloud_provider.cfg
+    content: 'datasource_list: [ NoCloud, None ]'
+
+runcmd:
+  - echo "It works!" > /var/log/test

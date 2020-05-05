@@ -1,0 +1,8 @@
+version:1
+config:
+  - type: physical
+    name: eth0
+    subnets:
+      - control: auto
+        type: dhcp
+# alternatively, static configuration works too
